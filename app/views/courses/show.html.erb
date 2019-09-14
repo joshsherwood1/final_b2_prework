@@ -1,0 +1,4 @@
+<h2>Student/Grade Information regarding Course: <%= @course.name%> </h2>
+<% @course.sort_students_by_grade.each do |course_student| %>
+  <p><%= course_student.student.name %>: <%= course_student.grade.round(2) %><p>
+<% end %>
